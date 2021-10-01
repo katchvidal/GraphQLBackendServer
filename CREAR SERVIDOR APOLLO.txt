@@ -1,0 +1,31 @@
+1.	CREAR SERVIDOR APOLLO Iniciar Proyecto npm e instalar dependecias ->
+	npm init -y
+	npm install graphql
+	npm install apollo-server
+	npm nodemon -D
+
+2.-	Configuracion Servidor de Apollo 
+	package.json "scripts" : { 
+		"start" : "node .(PUNTO si es un index o nombre del archivo eg. app.js )"
+	}
+	const { resolvers } = require('./GraphQL/resolvers')
+	const { typeDefs } = require('./GraphQL/typeDefs')
+	const { ApolloServer, gql } = require('apollo-server');
+	const { basedatos } = require('./database/config.db');
+	require('dotenv').config({path : '.env'})
+
+	//  Conexion a la base de datos
+	basedatos();
+
+
+	//  Crear Servidor ->
+	const server = new ApolloServer({
+		typeDefs,
+		resolvers,
+		context()
+	});
+
+	//  Arrancar Servidor ->
+	server.listen({port: process.env.PORT || 4000 }).then(( {url} ) =>{
+		console.log('Servidor Corriendo en la URL', url );
+	});
