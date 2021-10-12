@@ -172,7 +172,7 @@ const resolvers = {
             const { nombre } = input
             let producto = await Producto.findOne( { nombre } )
             if ( producto ) {
-                throw new Error ( `El Producto: ${producto} Ya Existe ` )
+                throw new Error ( `El Producto: ${producto} Ya Existe - Agotado Probablemente ` )
             }
             try {
                 const producto = await new Producto( input );
