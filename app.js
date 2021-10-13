@@ -11,6 +11,7 @@ basedatos();
 
 //  Crear Servidor ->
 const server = new ApolloServer({
+    cors,
     typeDefs,
     resolvers,
     context: ({ req }) => {
