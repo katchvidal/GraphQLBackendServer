@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/a8868927-214e-4df6-b328-c58e212825bf/resourceGroups/AppServicesKatch-rg/providers/Microsoft.Web/sites/appserviceskatch",
-    "appService.deploySubpath": "."
-}
