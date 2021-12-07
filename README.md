@@ -1,4 +1,4 @@
-#   Servidor de Apolo con GraphQL initial Server
+# Servidor de Apolo con GraphQL initial Server
 
 ```
 
@@ -7,4 +7,10 @@
     CON JSON WEB TOKEN ->
     LISTO PARA DESPLEGAR SCRIPT DE START REALIZADO
 
+
+
 ```
+
+# Github Actions
+
+az ad sp create-for-rbac --name "katchBackendServer" --role contributor \ --scopes /subscriptions/<subscription-id>/resourceGroups/<group-name>/providers/Microsoft.Web/sites/<app-name> \ --sdk-auth
