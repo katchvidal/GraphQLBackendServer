@@ -11,6 +11,15 @@
 
 ```
 
-# Github Actions
+# Dockerizar Backend GraphQL
 
-az ad sp create-for-rbac --name "katchBackendServer" --role contributor \ --scopes /subscriptions/<subscription-id>/resourceGroups/<group-name>/providers/Microsoft.Web/sites/<app-name> \ --sdk-auth
+```
+    - Dockerizar la Imagen Dockerfile ( Verficar que el contendor funcione bien en Local ya sea Windows o Linux )
+    - Verificar cual es el puerto por la que la Aplicacion se Expone
+    - Command -> docker tag <imagen id> gcr.io/<id del proyecto de google cloud>/<Nombre>:<Tag>
+    - Sube la imagen a Google Registry
+    - Crear Cloud Run:
+        * Seleccionar imagen
+        * Configurar
+        ** Puedes instalar un dominio personalizado muy sencillo google.domain.com
+```
